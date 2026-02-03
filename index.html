@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TinyPDF - Compress and minify your PDF files securely in your browser. No uploads, 100% private.">
+    <title>TinyPDF - Secure PDF Compressor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="merge.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M12 18V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M9 15L12 12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span class="logo-text">TinyPDF</span>
+            </a>
+        </div>
+        <nav class="nav-tabs">
+            <a href="index.html" class="nav-tab active">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" stroke="currentColor"
+                        stroke-width="2" />
+                    <path d="M17 21v-8H7v8M7 3v5h8" stroke="currentColor" stroke-width="2" />
+                </svg>
+                Compress
+            </a>
+            <a href="merge.html" class="nav-tab">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="3" width="8" height="10" rx="1" stroke="currentColor" stroke-width="2" />
+                    <rect x="14" y="3" width="8" height="10" rx="1" stroke="currentColor" stroke-width="2" />
+                    <path d="M6 17v4M18 17v4M6 21h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                Merge
+            </a>
+        </nav>
+        <div class="privacy-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>100% Private</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1 class="hero-title">
+                <span class="gradient-text">Compress</span> your PDFs
+                <br>
+                <span class="subtitle">Securely & Instantly</span>
+            </h1>
+            <p class="hero-description">
+                Reduce PDF file sizes by up to <strong>90%</strong>. Everything happens in your browser -
+                your files are <strong>never uploaded</strong> anywhere.
+            </p>
+        </section>
+
+        <section class="upload-section" id="upload-section">
+            <div class="dropzone" id="dropzone">
+                <div class="dropzone-content">
+                    <div class="dropzone-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <polyline points="17,8 12,3 7,8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <line x1="12" y1="3" x2="12" y2="15" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="dropzone-title">Drop your PDF here</h3>
+                    <p class="dropzone-subtitle">or click to browse files</p>
+                    <p class="dropzone-hint">Maximum file size: 100MB</p>
+                </div>
+                <input type="file" id="file-input" accept=".pdf,application/pdf" hidden>
+            </div>
+        </section>
+
+        <section class="processing-section hidden" id="processing-section">
+            <div class="file-card">
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="file-details">
+                        <h4 class="file-name" id="file-name">document.pdf</h4>
+                        <p class="file-size" id="file-size">2.5 MB</p>
+                    </div>
+                </div>
+
+                <div class="compression-options">
+                    <h4 class="options-title">Compression Preset</h4>
+                    <div class="options-grid five-cols">
+                        <button class="option-btn" data-level="minimal">
+                            <span class="option-icon">💎</span>
+                            <span class="option-label">Minimal</span>
+                            <span class="option-desc">200 DPI / 90%</span>
+                        </button>
+                        <button class="option-btn" data-level="low">
+                            <span class="option-icon">🎯</span>
+                            <span class="option-label">Low</span>
+                            <span class="option-desc">150 DPI / 85%</span>
+                        </button>
+                        <button class="option-btn active" data-level="medium">
+                            <span class="option-icon">⚖️</span>
+                            <span class="option-label">Medium</span>
+                            <span class="option-desc">120 DPI / 75%</span>
+                        </button>
+                        <button class="option-btn" data-level="high">
+                            <span class="option-icon">🚀</span>
+                            <span class="option-label">High</span>
+                            <span class="option-desc">96 DPI / 60%</span>
+                        </button>
+                        <button class="option-btn" data-level="maximum">
+                            <span class="option-icon">🔥</span>
+                            <span class="option-label">Maximum</span>
+                            <span class="option-desc">72 DPI / 50%</span>
+                        </button>
+                    </div>
+
+                    <div class="custom-controls">
+                        <div class="custom-header" id="custom-toggle">
+                            <span class="custom-title">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="2" />
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
+                                Custom Settings
+                            </span>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div class="custom-sliders hidden" id="custom-sliders">
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <label for="dpi-slider">Resolution (DPI)</label>
+                                    <span class="slider-value" id="dpi-value">120 DPI</span>
+                                </div>
+                                <input type="range" id="dpi-slider" min="72" max="300" value="120" step="1">
+                                <div class="slider-hints">
+                                    <span>72 (smallest)</span>
+                                    <span>300 (best quality)</span>
+                                </div>
+                            </div>
+
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <label for="quality-slider">JPEG Quality</label>
+                                    <span class="slider-value" id="quality-value">75%</span>
+                                </div>
+                                <input type="range" id="quality-slider" min="30" max="100" value="75" step="1">
+                                <div class="slider-hints">
+                                    <span>30% (smallest)</span>
+                                    <span>100% (best quality)</span>
+                                </div>
+                            </div>
+
+                            <div class="estimated-result">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                    <path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                                <span>Higher DPI and quality = larger file size but better visual quality</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Note: This converts pages to images. Text will no longer be selectable. Best for scanned
+                            documents &amp; image-heavy PDFs.</span>
+                    </div>
+                </div>
+
+                <button class="compress-btn" id="compress-btn">
+                    <span class="btn-text">Compress PDF</span>
+                    <span class="btn-loader hidden">
+                        <svg class="spinner" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none"
+                                stroke-dasharray="31.4 31.4" stroke-linecap="round" />
+                        </svg>
+                        <span class="progress-text">Processing page <span id="current-page">1</span> of <span
+                                id="total-pages">1</span>...</span>
+                    </span>
+                </button>
+
+                <div class="progress-container hidden" id="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="result-section hidden" id="result-section">
+            <div class="result-card">
+                <div class="result-header">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="result-title">Compression Complete!</h3>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Original Size</span>
+                        <span class="stat-value" id="original-size">2.5 MB</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">New Size</span>
+                        <span class="stat-value highlight" id="new-size">1.2 MB</span>
+                    </div>
+                    <div class="stat-card full-width">
+                        <span class="stat-label">Space Saved</span>
+                        <span class="stat-value savings" id="savings">52%</span>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button class="download-btn" id="download-btn">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Download Compressed PDF
+                    </button>
+                    <button class="reset-btn" id="reset-btn">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23 4V10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M20.49 15C19.84 16.8399 18.6096 18.4187 16.9842 19.4985C15.3588 20.5783 13.4265 21.1006 11.4784 20.9866C9.53038 20.8726 7.67159 20.1286 6.18114 18.8667C4.69069 17.6047 3.64968 15.8932 3.21404 13.9901C2.77841 12.087 2.97115 10.0952 3.76344 8.31508C4.55573 6.53496 5.90494 5.06288 7.60649 4.11207C9.30804 3.16127 11.2709 2.78282 13.2012 3.03275C15.1315 3.28268 16.9242 4.14758 18.31 5.49997L23 10"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Compress Another PDF
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="error-section hidden" id="error-section">
+            <div class="error-card">
+                <div class="error-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                        <line x1="15" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="9" y1="9" x2="15" y2="15" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h3 class="error-title">Something went wrong</h3>
+                <p class="error-message" id="error-message">Unable to process the PDF file.</p>
+                <button class="reset-btn error-reset" id="error-reset-btn">
+                    Try Again
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="security-info">
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor"
+                            stroke-width="2" />
+                        <path
+                            d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span>100% Local Processing</span>
+                </div>
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" />
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span>No data collection</span>
+                </div>
+                <div class="security-item">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="20,6 9,17 4,12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Uses PDF.js + jsPDF</span>
+                </div>
+            </div>
+            <p class="copyright">Made with care for your privacy • TinyPDF © 2026</p>
+        </div>
+    </footer>
+
+    <!-- PDF.js for rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <!-- jsPDF for creating compressed PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Set PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>

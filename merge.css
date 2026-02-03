@@ -1,0 +1,378 @@
+/* ===== Merge Page Specific Styles ===== */
+
+/* Navigation Tabs */
+.nav-tabs {
+    display: flex;
+    gap: var(--space-sm);
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    padding: var(--space-xs);
+}
+
+.nav-tab {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.nav-tab svg {
+    width: 18px;
+    height: 18px;
+}
+
+.nav-tab:hover {
+    color: var(--text-primary);
+    background: hsla(var(--primary-hue), 100%, 65%, 0.1);
+}
+
+.nav-tab.active {
+    color: white;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Logo Link */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Merge Icon */
+.merge-icon {
+    background: linear-gradient(135deg, hsl(280, 100%, 65%), hsl(200, 100%, 65%)) !important;
+}
+
+/* Files Section */
+.files-section {
+    width: 100%;
+}
+
+.files-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.files-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.files-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.files-title svg {
+    width: 22px;
+    height: 22px;
+    color: var(--primary);
+}
+
+.add-more-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.add-more-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.add-more-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--primary);
+    background: hsla(var(--primary-hue), 100%, 65%, 0.1);
+}
+
+/* Drag Hint */
+.drag-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-bottom: var(--space-md);
+}
+
+.drag-hint svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Files List */
+.files-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: var(--space-sm);
+}
+
+.files-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.files-list::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+}
+
+.files-list::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: var(--radius-full);
+}
+
+.files-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    cursor: grab;
+    transition: all var(--transition-fast);
+}
+
+.file-item:hover {
+    border-color: var(--primary-light);
+    background: hsla(var(--primary-hue), 100%, 65%, 0.05);
+}
+
+.file-item.dragging {
+    opacity: 0.5;
+    border-color: var(--primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.file-item.drag-over {
+    border-color: var(--primary);
+    background: hsla(var(--primary-hue), 100%, 65%, 0.1);
+}
+
+.drag-handle {
+    color: var(--text-muted);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+}
+
+.drag-handle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.file-item-icon {
+    width: 40px;
+    height: 40px;
+    background: hsla(var(--primary-hue), 100%, 65%, 0.15);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.file-item-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.file-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.file-item-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-item-size {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.file-item-order {
+    width: 28px;
+    height: 28px;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.remove-file-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.remove-file-btn:hover {
+    background: hsla(0, 84%, 60%, 0.15);
+    color: var(--error);
+}
+
+.remove-file-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Total Info */
+.total-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.separator {
+    color: var(--text-muted);
+}
+
+/* Quality Notice */
+.quality-notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: hsla(160, 84%, 45%, 0.1);
+    border: 1px solid hsla(160, 84%, 45%, 0.3);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+    color: var(--success);
+    font-size: 0.85rem;
+}
+
+.quality-notice svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Merge Button */
+.merge-btn {
+    width: 100%;
+    padding: var(--space-md) var(--space-xl);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, hsl(280, 100%, 65%), hsl(200, 100%, 65%));
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-md);
+}
+
+.merge-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px hsla(280, 100%, 65%, 0.3);
+}
+
+.merge-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        gap: var(--space-md);
+    }
+
+    .nav-tabs {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .privacy-badge span {
+        display: none;
+    }
+
+    .files-header {
+        flex-direction: column;
+        gap: var(--space-md);
+        align-items: stretch;
+    }
+
+    .add-more-btn {
+        justify-content: center;
+    }
+
+    .file-item-name {
+        max-width: 150px;
+    }
+}
