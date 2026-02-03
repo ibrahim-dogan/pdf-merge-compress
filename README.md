@@ -1,10 +1,10 @@
-# TinyPDF - PDF Compress & Merge
+# PDF Merge & Compress - PDF Compress & Merge
 
 A **100% client-side** PDF compression and merging tool. Your files never leave your browser - complete privacy guaranteed.
 
 🔗 **Live Demo**: [https://ibrahim-dogan.github.io/pdf-merge-compress/](https://ibrahim-dogan.github.io/pdf-merge-compress/)
 
-![TinyPDF Screenshot](screenshot.png)
+![PDF Merge & Compress Screenshot](screenshot.png)
 
 ## ✨ Features
 

@@ -1,5 +1,5 @@
 /**
- * TinyPDF - PDF Merge Feature
+ * PDF Merge & Compress - PDF Merge Feature
  * 
  * Merges multiple PDFs into one WITHOUT any compression or quality loss.
  * Uses pdf-lib which preserves the original PDF structure and content.
@@ -350,4 +350,4 @@ errorResetBtn.addEventListener('click', reset);
     });
 });
 
-console.log('TinyPDF Merge initialized. No compression - original quality preserved!');
+console.log('PDF Merge & Compress Merge initialized. No compression - original quality preserved!');

@@ -1,5 +1,5 @@
 /**
- * TinyPDF - REAL PDF Compression using PDF.js + jsPDF
+ * PDF Merge & Compress - REAL PDF Compression using PDF.js + jsPDF
  * 
  * How it works:
  * 1. PDF.js renders each page to a canvas at configurable DPI
@@ -403,6 +403,6 @@ errorResetBtn.addEventListener('click', reset);
     });
 });
 
-console.log('TinyPDF initialized with REAL compression using PDF.js + jsPDF');
+console.log('PDF Merge & Compress initialized with REAL compression using PDF.js + jsPDF');
 console.log('5 presets + custom DPI/Quality sliders available');
 console.log('All processing happens 100% locally in your browser.');
