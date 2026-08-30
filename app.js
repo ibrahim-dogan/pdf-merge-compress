@@ -181,8 +181,8 @@ function handleFile(file) {
         return;
     }
 
-    // Validate file size (100MB max)
-    const maxSize = 100 * 1024 * 1024;
+    // Validate file size (500MB max)
+    const maxSize = 500 * 1024 * 1024;
     if (file.size > maxSize) {
         showError('File size exceeds 100MB limit. Please select a smaller file.');
         return;
